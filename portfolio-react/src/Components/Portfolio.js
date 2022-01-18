@@ -13,7 +13,7 @@ export default function Portfolio() {
           <p class="m-0">Computer Science</p>
 
           <h2 class="text-center" id="experience">Experience</h2>
-          <h4 class="m-0">Web Developer, IT</h4>
+          <h4 class="m-0">Web Developer & IT</h4>
           <p class="m-0">September 2020 – December 2020</p>
           <p class="m-0"><i>CBD Center CA LLC</i></p>
           <ul>
