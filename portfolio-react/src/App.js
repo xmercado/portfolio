@@ -5,11 +5,11 @@ import Portfolio from './Components/Portfolio.js';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <header>
         <Header />
       </header>
-      <body>
+      <body class="bg-dark text-light">
         <Portfolio />
       </body>
       <footer>
