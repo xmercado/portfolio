@@ -12,7 +12,7 @@ function App() {
       <body class="bg-dark text-light">
         <Portfolio />
       </body>
-      <footer>
+      <footer class="text-light bg-danger p-3" id="contact">
         <Footer />
       </footer>
     </div>
