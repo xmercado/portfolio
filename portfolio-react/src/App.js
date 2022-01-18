@@ -1,7 +1,7 @@
 import './App.css';
-import Header from '.Components/Header.js';
-import Footer from '.Components/Footer.js';
-import Portfolio from '.Components/Portfolio.js';
+import Header from './Components/Header.js';
+import Footer from './Components/Footer.js';
+import Portfolio from './Components/Portfolio.js';
 
 function App() {
   return (
