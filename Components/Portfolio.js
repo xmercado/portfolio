@@ -1,6 +1,17 @@
-import { StyleSheet, View, Text, Image, Pressable, Linking, ScrollView } from 'react-native';
+import { StyleSheet, View, Text, Image, Pressable, Linking, ScrollView, useWindowDimensions} from 'react-native';
 
 export default function Portfolio() {
+  const { width } = useWindowDimensions();
+  const widthBreakpoint = 768;
+
+  let styles;
+  if (width < widthBreakpoint) {
+    styles = stylesMobile;
+  }
+  else {
+    styles = stylesWeb;
+  }
+
     return(
     <ScrollView style={styles.container}>
       <View>
@@ -120,7 +131,7 @@ export default function Portfolio() {
   )
 }
 
-const styles = StyleSheet.create({
+const stylesMobile = StyleSheet.create({
   container: {
     padding: 12,
   },
@@ -168,6 +179,92 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  skillsItem: {
+    width: '50%',
+    marginBottom: 2,
+  },
+  skillsItemLong: {
+    width: '100%',
+    margin: 2,
+  },
+  links: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+  },
+  projects: {
+    flex: 1,
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  projectItem: {
+    width: '100%',
+    margin: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  projectTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    marginTop: 4,
+  },
+})
+
+const stylesWeb = StyleSheet.create({
+  container: {
+    padding: 12,
+  },
+  txt: {
+    fontSize: 16,
+    color: '#FFFFFF',
+    margin: 2,
+  },
+  h2: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#DA0037',
+    alignSelf: 'center',
+    margin: 4,
+  },
+  h4: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    margin: 4,
+  },
+  bold: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+  },
+  italic: {
+    fontSize: 16,
+    fontStyle: 'italic',
+    color: '#FFFFFF',
+  },
+  img: {
+    width: 640,
+    height: 480,
+    maxWidth: '100%',
+    maxHeight: '100%',
+    resizeMode: 'cover',
+  },
+  linkItem: {
+    fontSize: 16,
+    color: '#DA0037',
+  },
+  skills: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
   },
   skillsItem: {
     width: '25%',
@@ -188,9 +285,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start',
+    justifyContent: 'center',
   },
   projectItem: {
-    width: '33%',
+    width: '30%',
     margin: 2,
   },
   projectTitle: {
