@@ -1,6 +1,10 @@
 import { StyleSheet, View, Text, Image, Pressable, Linking, ScrollView, useWindowDimensions} from 'react-native';
+import { useRef } from 'react';
 
 export default function Portfolio() {
+  const scroll = useRef(null);
+  //scroll.current.scrollTo({ x: 0, y: 0, animated: true });
+
   const { width } = useWindowDimensions();
   const widthBreakpoint = 768;
 
@@ -13,7 +17,7 @@ export default function Portfolio() {
   }
 
     return(
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} ref={scroll}>
       <View>
           <Text style={styles.h2} id="education">Education</Text>
           <Text style={styles.h4}>California State University, Fresno</Text>
@@ -63,7 +67,7 @@ export default function Portfolio() {
                 Analytics, Operating Systems, Computer Architecture, Computer Simulation, Computer Networks, Finite Automata</Text>
             </View>
           </View>
-
+        
         <View id="projects">
           <Text style={styles.h2}>Projects</Text>
           <View>
@@ -123,7 +127,25 @@ export default function Portfolio() {
                         through joining website</Text></li>
                     </ul>
                 </View>
-            </View> 
+            </View>
+            <View style={styles.projectItem}>
+                    <Pressable onPress={() => Linking.openURL(`https://luceroweb.github.io/trivia-and-chill/`)}>
+                      <Image style={styles.img} source={require('../Images/movie-trivia.png')}/>
+                    </Pressable>
+                    <Text style={styles.projectTitle}>Trivia and Chill</Text>
+                    <Text style={styles.txt}>2022</Text>
+                    <View style={styles.links}>
+                      <Pressable onPress={() => Linking.openURL(`https://luceroweb.github.io/trivia-and-chill/`)}><Text style={styles.linkItem}>Launch App</Text></Pressable>
+                      <Text style={styles.linkItem}> | </Text>
+                      <Pressable onPress={() => Linking.openURL(`https://github.com/luceroweb/trivia-and-chill`)}><Text style={styles.linkItem}>GitHub</Text></Pressable>
+                    </View>
+                    <Text style={styles.italic}>React Native, JavaScript, Expo, Animated, CSS</Text>
+                    <ul>
+                      <li><Text style={styles.txt}>Extensively developed trivia game with team while practing React Native and learning new technologies</Text></li>
+                      <li><Text style={styles.txt}>Assessed software development process through project board management and frequent testing and demos</Text></li>
+                      <li><Text style={styles.txt}>Developed minimum functionality and enhancements then debugged issues</Text></li>
+                    </ul>
+                </View>
           </View>
       </View>
     </View>
