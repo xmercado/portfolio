@@ -51,7 +51,7 @@ export default function Portfolio() {
           <Text style={styles.h2} id="skills">Skills</Text>
           <View style={styles.skills}>
             <View style={styles.skillsItem}>
-              <Text style={styles.txt}><Text style={styles.bold}>Languages:</Text> C++, Python, JavaScript, HTML, CSS, SQL</Text>
+              <Text style={styles.txt}><Text style={styles.bold}>Languages:</Text> C++, Python, JavaScript, HTML, CSS, TypeScript, SQL</Text>
             </View>
             <View style={styles.skillsItem}>
               <Text style={styles.txt}><Text style={styles.bold}>Frameworks:</Text> React, React Native, Bootstrap, Material-UI, Expo, Node.js, Wordpress</Text>
