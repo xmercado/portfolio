@@ -28,8 +28,9 @@ const styles = StyleSheet.create({
     padding: 4,
   },
   name: {
-    fontSize: 24,
+    fontSize: 35,
     color: '#FFFFFF',
+    fontWeight: 'bold',
   },
   text: {
     color: '#FFFFFF',
