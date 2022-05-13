@@ -36,6 +36,18 @@ export default function Portfolio() {
             <li><Text style={styles.txt}>Established team building while closely collaborating and connecting with coworkers as part of an inclusive community</Text></li>
           </ul>
 
+          <Text style={styles.h4}>Javascript Co-teacher</Text>
+          <Text style={styles.txt}>May 2022 – June 2022</Text>
+          <Text style={styles.italic}>Bitwise Industries</Text>
+          <ul>
+          <ul>
+            <li><Text style={styles.txt}>Assisted course instructor in teaching Javascript to students</Text></li>
+            <li><Text style={styles.txt}>Led and guided students in learning Javascript through each lesson activity and course project</Text></li>
+            <li><Text style={styles.txt}>Moderated Slack channel and Zoom calls</Text></li>
+            <li><Text style={styles.txt}>Troubleshooted technical issues</Text></li>
+          </ul>
+          </ul>
+
           <Text style={styles.h4}>Web Developer & IT</Text>
           <Text style={styles.txt}>September 2020 – December 2020</Text>
           <Text style={styles.italic}>CBD Center CA LLC</Text>
